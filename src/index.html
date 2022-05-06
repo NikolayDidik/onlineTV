@@ -123,9 +123,25 @@ body {
   height: 19px;
 }
 
+.section-banner {
+  margin-top: 20px;
+  border-bottom: 2px solid #2F2E2E;
+  position: relative;
+}
+
+.section-banner_image {
+  z-index: -1;
+  position: absolute;
+  right: 0;
+}
+
 .banner {
   max-width: 562px;
-  border-bottom: 2px solid #2F2E2E;
+  padding-top: 58px;
+  padding-bottom: 203px;
+  -webkit-box-shadow: 100px 0px 100px #000000;
+          box-shadow: 100px 0px 100px #000000;
+  background-color: #000;
 }
 
 .banner__title {
@@ -137,11 +153,13 @@ body {
 .banner__text {
   color: #C2C2C2;
   font-size: 18px;
-  line-height: 15px;
+  line-height: 28px;
+  margin-bottom: 33px;
 }
 
 .banner-info {
   font-weight: 800;
+  margin-bottom: 25px;
 }
 
 .banner-info__year {
@@ -150,10 +168,71 @@ body {
 
 .banner-info__age {
   margin-right: 18px;
+  position: relative;
+  width: 60px;
+  text-align: center;
+  display: inline-block;
+}
+
+.banner-info__age::before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 24px;
+  background-image: url(images/age.svg);
+  background-repeat: no repeat;
+  background-size: cover;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: 0;
+  right: 0;
 }
 
 .banner-info__time {
-  margin-right: 41px;
+  margin-right: 46px;
+}
+
+.banner-info__rating::after {
+  content: '';
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+  background-image: url(images/star.svg);
+  margin-left: 10px;
+}
+
+.banner-control_btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 100px;
+  padding: 15px 30px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+}
+
+.banner-control_btn-main {
+  background: #326cff;
+  background: linear-gradient(115deg, #326cff 0%, #26fff2 93%);
+  color: #fff;
+  position: relative;
+  padding-left: 59px;
+}
+
+.banner-control_btn-main::after {
+  content: '';
+  width: 14px;
+  height: 18px;
+  display: block;
+  background-image: url(images/play.svg);
+  position: absolute;
+  left: 30px;
+  top: calc(50% - 9px);
+}
+
+.banner-control_btn-more {
+  background-color: #fff;
+  color: #323232;
+  margin-left: 30px;
 }
 /*# sourceMappingURL=style.css.map */
     </style>
@@ -182,14 +261,19 @@ body {
         </ul>
       </div>
     </header>
-    <section> </section>
+    <section><img class="section-banner_image" src="/src/images/banner.png" alt="Banner"></section>
     <div class="container"> 
       <div class="banner">
         <h1 class="banner__title">Zack Snyder's Justice League</h1>
         <div class="banner-info"><span class="banner-info__year">2021</span><span class="banner-info__age"> 18+</span><span class="banner-info__time">4h 2min</span><span class="banner-info__rating"> 8.8</span></div>
         <p class="banner__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
+        <div class="banner-control"> 
+          <button class="banner-control_btn banner-control_btn-main">Watch</button>
+          <button class="banner-control_btn banner-control_btn-more">More information</button>
+        </div>
       </div>
     </div>
+    <div class="section-banner"> </div>
     <footer> 
       <div class="footer"></div>
     </footer>

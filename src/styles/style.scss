@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap');
 
 $white: #fff;
+$black:#000;
 $bg-gradient: linear-gradient(115deg, rgba(50,108,255,1) 0%, rgba(38,255,242,1) 93%);
 $bg-gradient-save: rgb(50,108,255);
 html {
@@ -92,9 +93,22 @@ body {
       }
    }
 }
+.section-banner {
+   margin-top: 20px;
+   border-bottom: 2px solid #2F2E2E;
+   position: relative;
+   &_image {
+      z-index: -1;
+      position: absolute;
+      right: 0;
+   }
+}
 .banner {
    max-width: 562px;
-   border-bottom: 2px solid #2F2E2E;
+   padding-top: 58px;
+   padding-bottom: 203px;
+   box-shadow: 100px 0px 100px #000000;
+   background-color: $black;
    &__title {
       font-family: 'Marcellus', serif;
       line-height: 75px;
@@ -103,18 +117,80 @@ body {
    &__text {
       color: #C2C2C2;
       font-size: 18px;
-      line-height: 15px;
+      line-height: 28px;
+      margin-bottom: 33px;
    }
    &-info {
       font-weight: 800;
+      margin-bottom: 25px;
       &__year {
          margin-right: 18px;
       }
       &__age {
          margin-right: 18px;
+         position: relative;
+         width: 60px;
+         text-align: center;
+         display: inline-block;
+         &::before {
+            content: '';
+            display: block;
+            width: 100%;
+            height: 24px;
+            background-image: url(images/age.svg);
+            background-repeat: no repeat;
+            background-size: cover;
+            position: absolute;
+            top: calc(50% - 12px);
+            left: 0;
+            right: 0;
+         }
       }
       &__time {
-         margin-right: 41px;
+         margin-right: 46px;
+      }
+      &__rating {
+         &::after {
+            content: '';
+            display: inline-block;
+            width: 16px;
+            height: 15px;
+            background-image: url(images/star.svg);
+            margin-left: 10px;
+         }
+      }
+   }
+   &-control {
+      &_btn {
+         background-color: transparent;
+         border: none;
+         border-radius: 100px;
+         padding: 15px 30px;
+         font-family: 'Mulish', sans-serif;
+         font-weight: 800;
+      }
+      &_btn-main {
+         background: $bg-gradient-save;
+         background: $bg-gradient;
+         color: $white;
+         position: relative;
+         padding-left: 59px;
+         &::after {
+            content: '';
+            width: 14px;
+            height: 18px;
+            display: block;
+            background-image: url(images/play.svg);
+            position: absolute;
+            left: 30px;
+            top: calc(50% - 9px);
+         }
+      }
+      &_btn-more {
+         background-color: $white;
+         color: #323232;
+         margin-left: 30px;
       }
    }
 }
+
