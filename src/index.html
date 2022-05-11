@@ -16,6 +16,10 @@ body {
   font-family: 'Mulish', sans-serif;
 }
 
+button:focus {
+  outline: none;
+}
+
 .container {
   max-width: 144rem;
   padding-left: 1.5rem;
@@ -53,13 +57,19 @@ body {
 }
 
 .nav-item {
-  margin: 0 1.5rem;
+  margin: 0px 2.5rem;
 }
 
 .nav-link {
   text-decoration: none;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
+  -webkit-transition: 0.2s ease color;
+  transition: 0.2s ease color;
+}
+
+.nav-link:hover {
+  color: white;
 }
 
 .nav-link::after {
@@ -123,21 +133,79 @@ body {
   height: 19px;
 }
 
-.section-banner {
-  margin-top: 20px;
-  border-bottom: 2px solid #2F2E2E;
+.section {
+  padding-top: 50px;
+}
+
+.section__h2 {
+  font-size: 28px;
+  line-height: 20px;
   position: relative;
+  padding-left: 20px;
+  padding-right: 30px;
+  font-weight: 700px;
+  padding-bottom: 22px;
+  display: inline-block;
+}
+
+.section__h2::before {
+  content: '';
+  display: block;
+  width: 8px;
+  height: 35px;
+  background: #326cff;
+  background: linear-gradient(115deg, #326cff 0%, #26fff2 93%);
+  border-radius: 50px;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 30px);
+}
+
+.section__h2-link {
+  color: #fff;
+  text-decoration: none;
+}
+
+.section__btn {
+  border: none;
+  border-radius: 100px;
+  padding: 15px 30px;
+  font-family: 'Mulish', sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+  background: #326cff;
+  background: linear-gradient(115deg, #326cff 0%, #26fff2 93%);
+  color: #fff;
+  -webkit-transition: 0.2s ease  box-shadow;
+  transition: 0.2s ease  box-shadow;
+  margin-top: 55px;
+}
+
+.section__btn:hover {
+  -webkit-box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+}
+
+.section-banner {
+  border-bottom: 1px solid #2F2E2E;
+  position: relative;
+  overflow: hidden;
 }
 
 .section-banner_image {
+  height: 100%;
   z-index: -1;
   position: absolute;
   right: 0;
+  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .banner {
   max-width: 562px;
-  padding-top: 58px;
+  padding-top: 122px;
   padding-bottom: 203px;
   -webkit-box-shadow: 100px 0px 100px #000000;
           box-shadow: 100px 0px 100px #000000;
@@ -208,14 +276,24 @@ body {
   padding: 15px 30px;
   font-family: 'Mulish', sans-serif;
   font-weight: 800;
+  cursor: pointer;
 }
 
 .banner-control_btn-main {
+  -webkit-box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 4px 50px rgba(50, 108, 255, 0.5);
   background: #326cff;
   background: linear-gradient(115deg, #326cff 0%, #26fff2 93%);
   color: #fff;
   position: relative;
   padding-left: 59px;
+  -webkit-transition: 0.2s ease  box-shadow;
+  transition: 0.2s ease  box-shadow;
+}
+
+.banner-control_btn-main:hover {
+  -webkit-box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+          box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
 }
 
 .banner-control_btn-main::after {
@@ -233,6 +311,59 @@ body {
   background-color: #fff;
   color: #323232;
   margin-left: 30px;
+  -webkit-transition: 0.2s ease background-color, 0.2s ease color;
+  transition: 0.2s ease background-color, 0.2s ease color;
+}
+
+.banner-control_btn-more:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.movies {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.movies-item {
+  -webkit-box-shadow: 0px 0px 0px rgba(44, 176, 249, 0);
+          box-shadow: 0px 0px 0px rgba(44, 176, 249, 0);
+  -webkit-transition: .2s ease box-shadow;
+  transition: .2s ease box-shadow;
+  border-radius: 20px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 14%;
+          flex: 0 0 14%;
+}
+
+.movies-item:hover {
+  -webkit-box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.5);
+          box-shadow: 0px 0px 20px rgba(44, 176, 249, 0.5);
+}
+
+.movies__link {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 309px;
+  display: block;
+}
+
+.movies__img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=style.css.map */
     </style>
@@ -261,19 +392,46 @@ body {
         </ul>
       </div>
     </header>
-    <section><img class="section-banner_image" src="/src/images/banner.png" alt="Banner"></section>
-    <div class="container"> 
-      <div class="banner">
-        <h1 class="banner__title">Zack Snyder's Justice League</h1>
-        <div class="banner-info"><span class="banner-info__year">2021</span><span class="banner-info__age"> 18+</span><span class="banner-info__time">4h 2min</span><span class="banner-info__rating"> 8.8</span></div>
-        <p class="banner__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
-        <div class="banner-control"> 
-          <button class="banner-control_btn banner-control_btn-main">Watch</button>
-          <button class="banner-control_btn banner-control_btn-more">More information</button>
+    <section class="section-banner"> <img class="section-banner_image" src="/src/images/banner.png" alt="Banner">
+      <div class="container"> 
+        <div class="banner">
+          <h1 class="banner__title">Zack Snyder's Justice League</h1>
+          <div class="banner-info"><span class="banner-info__year">2021</span><span class="banner-info__age"> 18+</span><span class="banner-info__time">4h 2min</span><span class="banner-info__rating"> 8.8</span></div>
+          <p class="banner__text">Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.</p>
+          <div class="banner-control"> 
+            <button class="banner-control_btn banner-control_btn-main">Watch</button>
+            <button class="banner-control_btn banner-control_btn-more">More information</button>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="section-banner"> </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <h2 class="section__h2"> <a class="section__h2-link" href="#">Trending TV Shows </a></h2>
+        <div class="movies"> 
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster01.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster02.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster03.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster04.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster05.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster06.png" alt=""></a></div>
+        </div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="container"> 
+        <h2 class="section__h2"> <a class="section__h2-link" href="#">Trending Movies </a></h2>
+        <div class="movies"> 
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster07.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster08.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster09.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster10.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster11.png" alt=""></a></div>
+          <div class="movies-item"> <a class="movies__link" href="#"><img class="movies__img" src="..//src/images/posters/poster12.png" alt=""></a></div>
+        </div>
+        <button class="section__btn">See more</button>
+      </div>
+    </section>
     <footer> 
       <div class="footer"></div>
     </footer>

@@ -10,20 +10,65 @@ html(lang="en")
   body
     include modules/header 
 
-    section
+    section.section-banner 
       img(src="/src/images/banner.png", alt="Banner").section-banner_image
-    .container 
-      .banner
-        h1.banner__title Zack Snyder's Justice League
-        .banner-info
-          span.banner-info__year 2021
-          span.banner-info__age  18+
-          span.banner-info__time 4h 2min
-          span.banner-info__rating  8.8
-        p.banner__text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
-        .banner-control 
-          button.banner-control_btn.banner-control_btn-main Watch
-          button.banner-control_btn.banner-control_btn-more More information
-    .section-banner 
-     
+      .container 
+        .banner
+          h1.banner__title Zack Snyder's Justice League
+          .banner-info
+            span.banner-info__year 2021
+            span.banner-info__age  18+
+            span.banner-info__time 4h 2min
+            span.banner-info__rating  8.8
+          p.banner__text Determined to ensure Superman's ultimate sacrifice was not in vain, Bruce Wayne aligns forces with Diana Prince with plans to recruit a team of metahumans to protect the world from an approaching threat of catastrophic proportions.
+          .banner-control 
+            button.banner-control_btn.banner-control_btn-main Watch
+            button.banner-control_btn.banner-control_btn-more More information
+    section.section
+      .container 
+        h2.section__h2 
+          a(href="#").section__h2-link Trending TV Shows 
+        .movies 
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster01.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster02.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster03.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster04.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster05.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster06.png", alt="").movies__img
+    section.section
+      .container 
+        h2.section__h2 
+          a(href="#").section__h2-link Trending Movies 
+        .movies 
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster07.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster08.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster09.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster10.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster11.png", alt="").movies__img
+          .movies-item 
+            a(href="#").movies__link
+              img(src="..//src/images/posters/poster12.png", alt="").movies__img  
+        button.section__btn See more
     include modules/footer
