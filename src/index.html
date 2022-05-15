@@ -379,13 +379,18 @@ button:focus {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   text-align: center;
+  margin-top: 3px;
 }
 
 .genres-item {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 48px 10px 34px;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 24%;
-          flex: 0 0 24%;
+      -ms-flex: 0 0 23.7%;
+          flex: 0 0 23.7%;
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 .genres-item_romance {
@@ -418,6 +423,29 @@ button:focus {
 
 .genres-item_documentary {
   background: linear-gradient(109.31deg, #1FA2FF 2.4%, #1FA2FF 2.41%, #1F535C 97.46%);
+}
+
+.genres-icon {
+  height: 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.genres__image {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.genres__title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: -2px 0px 0px 0px;
+  padding-top: 5px;
 }
 /*# sourceMappingURL=style.css.map */
     </style>
@@ -490,28 +518,36 @@ button:focus {
       <div class="container"> 
         <h2 class="section__h2"> <a class="section__h2-link" href="#">Popular Genres </a></h2>
         <div class="genres">
-          <div class="genres-item genres-item_romance"> <img src="..//src/images/genres/genres01.svg" alt="">
+          <div class="genres-item genres-item_romance">
+            <div class="genres-icon"><img class="genres__image" src="..//src/images/genres/genres01.svg" alt=""></div>
             <h3 class="genres__title">Romance </h3>
           </div>
-          <div class="genres-item genres-item_drama"> <img src="..//src/images/genres/drama.svg" alt="">
+          <div class="genres-item genres-item_drama">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/drama.svg" alt=""></div>
             <h3 class="genres__title">Drama</h3>
           </div>
-          <div class="genres-item genres-item_historical"> <img src="..//src/images/genres/historical.svg" alt="">
+          <div class="genres-item genres-item_historical">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/historical.svg" alt=""></div>
             <h3 class="genres__title">Historical</h3>
           </div>
-          <div class="genres-item genres-item_action"> <img src="..//src/images/genres/action.svg" alt="">
+          <div class="genres-item genres-item_action">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/action.svg" alt=""></div>
             <h3 class="genres__title">Action</h3>
           </div>
-          <div class="genres-item genres-item_sci-fi"> <img src="..//src/images/genres/sci-fi.svg" alt="">
+          <div class="genres-item genres-item_sci-fi">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/sci-fi.svg" alt=""></div>
             <h3 class="genres__title">Sci-fi </h3>
           </div>
-          <div class="genres-item genres-item_horror"> <img src="..//src/images/genres/horror.svg" alt="">
+          <div class="genres-item genres-item_horror">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/horror.svg" alt=""></div>
             <h3 class="genres__title">Horror</h3>
           </div>
-          <div class="genres-item genres-item_comedy"> <img src="..//src/images/genres/comedy.svg" alt="">
+          <div class="genres-item genres-item_comedy">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/comedy.svg" alt=""></div>
             <h3 class="genres__title">Comedy</h3>
           </div>
-          <div class="genres-item genres-item_documentary"> <img src="..//src/images/genres/documentary.svg" alt="">
+          <div class="genres-item genres-item_documentary">
+            <div class="genres-icon"> <img class="genres__image" src="..//src/images/genres/documentary.svg" alt=""></div>
             <h3 class="genres__title">Documentary</h3>
           </div>
         </div>
