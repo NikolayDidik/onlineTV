@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Mulish:wght@400;600;700;800&display=swap");
 html {
   font-size: 10px;
 }
@@ -579,5 +579,42 @@ button:focus {
 .offer__btn:hover {
   -webkit-box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
           box-shadow: 0px 0px 0px rgba(50, 108, 255, 0.5);
+}
+
+footer {
+  background-color: #101012;
+  padding: 70px 0 50px;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 144rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  margin: 0 auto;
+}
+
+.footer-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.footer-list__item {
+  margin-bottom: 20px;
+}
+
+.footer-list__link {
+  font-size: 18px;
+  color: #C2C2C2;
+  text-decoration: none;
+  font-weight: 600;
 }
 /*# sourceMappingURL=style.css.map */
